@@ -128,6 +128,45 @@ public class SpotSellLimitOrderScript extends TestBase {
     }
 
     @Test(priority = 9)
+    public void verifyPriceCurrencyValueFunctionality() throws IOException, InterruptedException {
+        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(sellLimitOrder.validateCurrencyPriceValue(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 10)
+    public void verifyOrderTypeFunctionality() throws IOException, InterruptedException {
+        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(sellLimitOrder.validateOrderType(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 11)
+    public void verifyAfterPlacedLimitOrderStatusShouldBeNewFunctionality() throws IOException, InterruptedException {
+        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(sellLimitOrder.validateAfterPlacedLimitOrderStatusShouldBeNew(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 12)
     public void verifyCancelSellLimitOrderMessageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -140,7 +179,20 @@ public class SpotSellLimitOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 10)
+    @Test(priority = 13)
+    public void verifyAfterPlacedLimitOrderStatusShouldBeCancelledFunctionality() throws IOException, InterruptedException {
+        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(sellLimitOrder.validateAfterPlacedLimitOrderStatusShouldBeCancelled(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 14)
     public void verifyAfterCancelSellLimitOrderBalanceOfUSDTFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -153,7 +205,7 @@ public class SpotSellLimitOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 11)
+    @Test(priority = 15)
     public void verifyAfterCancelSellLimitOrderBalanceOfCurrencyFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
