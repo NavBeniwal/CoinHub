@@ -73,6 +73,8 @@ public class SpotSellLimitOrder {
     private WebElement openOrders;
     @FindBy(xpath = "//p[text()='All Orders']")
     private WebElement allOrders;
+    @FindBy(xpath = "//p[text()='Trade History']")
+    private WebElement tradeHistory;
     @FindBy(xpath = "//span[text()='New']")
     private WebElement statusNew;
     @FindBy(xpath = "(//span[text()='Cancelled'])[1]")
@@ -327,23 +329,23 @@ public class SpotSellLimitOrder {
         return isTrue;
     }
 
-    public boolean validateCurrencyPriceValue(ExtentTest test) throws IOException {
+    public boolean validateEnterCurrencyPriceAndOpenOrdersPriceShouldBeEqual(ExtentTest test) throws IOException {
         boolean isTrue = false;
 
         //Currency amount
         double limitPriceTextFieldValueIs=limitPriceTextFieldVal;
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Enter currency amount is: "+limitPriceTextFieldValueIs);
+        test.log(LogStatus.INFO,"Enter currency amount is: "+limitPriceTextFieldValueIs);
 
         //Split the value
         String priceValue=currencyPrice.getText();
-        String[] priceFilledAmount = priceValue.split("\\s+");
+        String[] priceValueOnOpenOrdersPage = priceValue.split("\\s+");
 
         //Convert string values to double
-        double priceFilledAmountIs = Double.parseDouble(priceFilledAmount[0]);
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount is: "+priceFilledAmountIs);
+        double priceValueOnOpenOrdersPageIs = Double.parseDouble(priceValueOnOpenOrdersPage[0]);
+        test.log(LogStatus.INFO,"Price value on open orders page is: "+priceValueOnOpenOrdersPageIs);
 
         //Compare the values
-        if ((priceFilledAmountIs == limitPriceTextFieldValueIs)) {
+        if ((priceValueOnOpenOrdersPageIs == limitPriceTextFieldValueIs)) {
             isTrue=true;
             test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified both the values are equal.");
         } else {
@@ -354,15 +356,15 @@ public class SpotSellLimitOrder {
         return isTrue;
     }
 
-    public boolean validateOrderType(ExtentTest test) throws IOException {
+    public boolean validateOrderTypeShouldBeLimit(ExtentTest test) throws IOException {
         boolean isTrue = false;
 
         String limitOrderType=PropertyReaderOptimized.getKeyValue("limitOrderType");
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Order type should be: "+limitOrderType);
+        test.log(LogStatus.INFO,"Order type should be: "+limitOrderType);
 
         //Get the value
         String limitOrderTypeIs=orderType.getText();
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Order type is: "+limitOrderTypeIs);
+        test.log(LogStatus.INFO,"Order type is: "+limitOrderTypeIs);
 
         //Compare the values
         if ((limitOrderTypeIs.equals(limitOrderType))) {
@@ -376,27 +378,29 @@ public class SpotSellLimitOrder {
         return isTrue;
     }
 
-    public boolean validateAfterPlacedLimitOrderStatusShouldBeNew(ExtentTest test) throws IOException, InterruptedException {
+    public boolean validateAfterPlacedLimitOrderStatusShouldBeNewOnAllOrdersPage(ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue = false;
 
         String limitOpenOrderStatus=PropertyReaderOptimized.getKeyValue("limitOpenOrderStatus");
+        test.log(LogStatus.INFO,"After placed limit order on all orders page status should be: "+limitOpenOrderStatus);
 
         //Click on the all orders
         basePage.waitForElementToBeVisible(allOrders);
         basePage.click(allOrders);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the all orders.");
+        test.log(LogStatus.INFO, "Verified clicked on the all orders.");
 
         //Get the value
         basePage.waitForElementToBeVisible(statusNew);
-        String status=statusNew.getText();
+        String allOrdersPageStatus=statusNew.getText();
+        test.log(LogStatus.INFO,"After placed limit order on all orders page status is: "+allOrdersPageStatus);
 
         //Compare the values
-        if(status.equals(limitOpenOrderStatus)){
+        if(allOrdersPageStatus.equals(limitOpenOrderStatus)){
             isTrue=true;
-            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified order status should be New and it is New.");
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values are equal.");
         }else {
             isTrue=false;
-            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified order status should be New but it is Done.");
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values aren't equal.");
         }
 
         return isTrue;
@@ -408,12 +412,12 @@ public class SpotSellLimitOrder {
         //Click on the open orders
         basePage.waitForElementToBeVisible(openOrders);
         basePage.click(openOrders);
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the open orders.");
+        test.log(LogStatus.INFO,"Verified clicked on the open orders.");
 
         //Click on the cancel button
         basePage.waitForElementToBeVisible(clickOnCancelBtn);
         basePage.click(clickOnCancelBtn);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the cancel button.");
+        test.log(LogStatus.INFO,"Verified clicked on the cancel button.");
 
         //Get the value
         basePage.waitForElementToBeVisible(orderCancelledSuccessfullyPopUpMsg);
@@ -430,27 +434,57 @@ public class SpotSellLimitOrder {
         return isTrue;
     }
 
-    public boolean validateAfterPlacedLimitOrderStatusShouldBeCancelled(ExtentTest test) throws IOException, InterruptedException {
+    public boolean validateAfterCancelLimitOrderStatusShouldBeCancelledOnAllOrdersPage(ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue = false;
 
         String limitCancelOrderStatus=PropertyReaderOptimized.getKeyValue("limitCancelOrderStatus");
+        test.log(LogStatus.INFO,"After cancelled limit order on all orders page status should be: "+limitCancelOrderStatus);
 
         //Click on the all orders
         basePage.waitForElementToBeVisible(allOrders);
         basePage.click(allOrders);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the all orders.");
+        test.log(LogStatus.INFO,"Verified clicked on the all orders.");
 
         //Get the value
         basePage.waitForElementToBeVisible(statusCancelled);
-        String cancelled=statusCancelled.getText();
+        String allOrdersPageStatus=statusCancelled.getText();
+        test.log(LogStatus.INFO,"After cancelled limit order on all orders page status is: "+allOrdersPageStatus);
 
         //Compare the values
-        if(cancelled.equals(limitCancelOrderStatus)){
+        if(allOrdersPageStatus.equals(limitCancelOrderStatus)){
             isTrue=true;
-            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified order status should be Cancelled and it is Cancelled.");
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values are equal.");
         }else {
             isTrue=false;
-            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified order status should be Cancelled but it is New.");
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values aren't equal.");
+        }
+
+        return isTrue;
+    }
+
+    public boolean validateAfterCancelLimitOrderStatusShouldBeCancelledOnTradeHistoryPage(ExtentTest test) throws IOException, InterruptedException {
+        boolean isTrue = false;
+
+        String limitCancelOrderStatus=PropertyReaderOptimized.getKeyValue("limitCancelOrderStatus");
+        test.log(LogStatus.INFO,"After cancelled limit order on trade history page status should be: "+limitCancelOrderStatus);
+
+        //Click on the trade history
+        basePage.waitForElementToBeVisible(tradeHistory);
+        basePage.click(tradeHistory);
+        test.log(LogStatus.INFO,"Clicked on the trade history.");
+
+        //Get the value
+        basePage.waitForElementToBeVisible(statusCancelled);
+        String tradeHistoryPageStatus=statusCancelled.getText();
+        test.log(LogStatus.INFO,"After cancelled limit order on trade history page status is: "+tradeHistoryPageStatus);
+
+        //Compare the values
+        if(tradeHistoryPageStatus.equals(limitCancelOrderStatus)){
+            isTrue=true;
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values are equal.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values aren't equal.");
         }
 
         return isTrue;

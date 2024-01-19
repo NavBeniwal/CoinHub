@@ -128,10 +128,10 @@ public class SpotBuyLimitOrderScript extends TestBase {
     }
 
     @Test(priority = 9)
-    public void verifyCurrencyPriceValueFunctionality() throws IOException, InterruptedException {
+    public void verifyEnterCurrencyPriceAndOpenOrdersPriceShouldBeEqualFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(buyLimitOrder.validateCurrencyPriceValue(test),true);
+            softAssert.assertEquals(buyLimitOrder.validateEnterCurrencyPriceAndOpenOrdersPriceShouldBeEqual(test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -141,10 +141,10 @@ public class SpotBuyLimitOrderScript extends TestBase {
     }
 
     @Test(priority = 10)
-    public void verifyOrderTypeFunctionality() throws IOException, InterruptedException {
+    public void verifyOrderTypeShouldBeLimitFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(buyLimitOrder.validateOrderType(test),true);
+            softAssert.assertEquals(buyLimitOrder.validateOrderTypeShouldBeLimit(test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -154,10 +154,10 @@ public class SpotBuyLimitOrderScript extends TestBase {
     }
 
     @Test(priority = 11)
-    public void verifyAfterPlacedLimitOrderStatusShouldBeNewFunctionality() throws IOException, InterruptedException {
+    public void verifyAfterPlacedLimitOrderStatusShouldBeNewOnAllOrdersPageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(buyLimitOrder.validateAfterPlacedLimitOrderStatusShouldBeNew(test),true);
+            softAssert.assertEquals(buyLimitOrder.validateAfterPlacedLimitOrderStatusShouldBeNewOnAllOrdersPage(test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -180,10 +180,10 @@ public class SpotBuyLimitOrderScript extends TestBase {
     }
 
     @Test(priority = 13)
-    public void verifyAfterPlacedLimitOrderStatusShouldBeCancelledFunctionality() throws IOException, InterruptedException {
+    public void verifyAfterCancelLimitOrderStatusShouldBeCancelledOnAllOrdersPageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(buyLimitOrder.validateAfterPlacedLimitOrderStatusShouldBeCancelled(test),true);
+            softAssert.assertEquals(buyLimitOrder.validateAfterCancelLimitOrderStatusShouldBeCancelledOnAllOrdersPage(test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -193,6 +193,19 @@ public class SpotBuyLimitOrderScript extends TestBase {
     }
 
     @Test(priority = 14)
+    public void verifyAfterCancelLimitOrderStatusShouldBeCancelledOnTradeHistoryPageFunctionality() throws IOException, InterruptedException {
+        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(buyLimitOrder.validateAfterCancelLimitOrderStatusShouldBeCancelledOnTradeHistoryPage(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 15)
     public void verifyAfterCancelBuyLimitOrderBalanceOfUSDTFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -205,7 +218,7 @@ public class SpotBuyLimitOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 15)
+    @Test(priority = 16)
     public void verifyAfterCancelBuyLimitOrderBalanceOfCurrencyFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
