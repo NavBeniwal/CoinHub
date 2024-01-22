@@ -48,6 +48,8 @@ public class SpotSellMarketOrder {
     private WebElement placeSellOrderButton;
     @FindBy(xpath = "//p[text()='All Orders']")
     private WebElement allOrders;
+    @FindBy(xpath = "//p[text()='Trade History']")
+    private WebElement tradeHistory;
     @FindBy(xpath = "//p[text()='Market']")
     private WebElement orderType;
     @FindBy(xpath = "(//div[@class='flexCenter'])[1]")
@@ -60,10 +62,8 @@ public class SpotSellMarketOrder {
     private WebElement remainingAmount;
     @FindBy(xpath = "(//td[@class='ant-table-cell']/p)[24]")
     private WebElement totalAmount;
-    @FindBy(xpath = "//span[text()='New']")
-    private WebElement statusNew;
-    @FindBy(xpath = "(//span[text()='Done'])[1]")
-    private WebElement statusDone;
+    @FindBy(xpath = "(//td[@class='ant-table-cell'])[70]")
+    private WebElement status;
 
     public boolean validateSellMarketOrderCreatedSuccessfully(String createOrder, ExtentTest test) throws IOException {
         boolean isTrue = false;
@@ -71,11 +71,13 @@ public class SpotSellMarketOrder {
         String amount = PropertyReaderOptimized.getKeyValue("amount");
 
         //Click on the trade button
+        basePage.waitForElementToBeInvisible(tradeBtn);
         basePage.waitForElementToBeVisible(tradeBtn);
         basePage.click(tradeBtn);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the trade button.");
 
         //Click on the sell button
+        basePage.waitForElementToBeInvisible(sellBtn);
         basePage.waitForElementToBeVisible(sellBtn);
         basePage.click(sellBtn);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the sell button.");
@@ -115,6 +117,7 @@ public class SpotSellMarketOrder {
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the place sell order button.");
 
         //Compare the values
+        basePage.waitForElementToBeInvisible(orderCreatedSuccessfullyPopUpMsg);
         basePage.waitForElementToBeVisible(orderCreatedSuccessfullyPopUpMsg);
         String orderCreate=orderCreatedSuccessfullyPopUpMsg.getText();
         if (createOrder.equals(orderCreate)) {
@@ -136,23 +139,53 @@ public class SpotSellMarketOrder {
         boolean isTrue = false;
 
         String marketOrderStatus=PropertyReaderOptimized.getKeyValue("marketOrderStatus");
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Order status on all orders page should be: "+marketOrderStatus);
 
         //Click on the all orders
         basePage.waitForElementToBeVisible(allOrders);
         basePage.click(allOrders);
-        test.log(LogStatus.INFO, "Verified clicked on the all orders.");
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the all orders.");
 
         //Get the value
-        basePage.waitForElementToBeVisible(statusDone);
-        String status=statusDone.getText();
+        basePage.waitForElementToBeVisible(status);
+        String allOrdersPageStatusIs=status.getText();
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Order status on all orders page is: "+allOrdersPageStatusIs);
 
         //Compare the values
-        if(status.equals(marketOrderStatus)){
+        if(allOrdersPageStatusIs.equals(marketOrderStatus)){
             isTrue=true;
-            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified order status should be done and it is Done.");
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values are equal.");
         }else {
             isTrue=false;
-            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified order status should be done but it is New.");
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values aren't equal.");
+        }
+
+        return isTrue;
+    }
+
+    public boolean validateAfterPlacedMarketOrderOnTradeHistoryPageStatusShouldBeDone(ExtentTest test) throws IOException, InterruptedException {
+        boolean isTrue = false;
+
+        String marketOrderStatus=PropertyReaderOptimized.getKeyValue("marketOrderStatus");
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"After placed market order on trade history page status should be: "+marketOrderStatus);
+
+        //Click on the trade history
+        basePage.waitForElementToBeVisible(tradeHistory);
+        basePage.click(tradeHistory);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Clicked on the trade history.");
+
+        //Get the value
+        basePage.waitForElementToBeVisible(status);
+        String tradeHistoryPageStatus=status.getText();
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"After cancelled limit order on trade history page status is: "+tradeHistoryPageStatus);
+
+        //Compare the values
+        if(tradeHistoryPageStatus.equals(marketOrderStatus)){
+            isTrue=true;
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values are equal.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both the values aren't equal.");
         }
 
         return isTrue;
@@ -161,13 +194,18 @@ public class SpotSellMarketOrder {
     public boolean validateTypeOfOrderShouldBeMarket(ExtentTest test) throws IOException {
         boolean isTrue = false;
 
+        //Click on the all orders
+        basePage.waitForElementToBeVisible(allOrders);
+        basePage.click(allOrders);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the all orders.");
+
         //Type of order
         String typeOfOrderShouldBe=PropertyReaderOptimized.getKeyValue("typeOfOrder");
-        test.log(LogStatus.INFO,"Type of order should be: "+typeOfOrderShouldBe);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Type of order on all orders page should be: "+typeOfOrderShouldBe);
 
         //Get the value
         String typeOfOrderIs=basePage.getText(orderType);
-        test.log(LogStatus.INFO,"Type of order is: "+typeOfOrderIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Type of order on all orders page is: "+typeOfOrderIs);
 
         //Compare the values
         if(typeOfOrderIs.equals(typeOfOrderShouldBe)){
@@ -185,11 +223,11 @@ public class SpotSellMarketOrder {
         boolean isTrue = false;
 
         String orderSideShouldBe=PropertyReaderOptimized.getKeyValue("sellOrderSide");
-        test.log(LogStatus.INFO,"Order side should be: "+orderSideShouldBe);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Order side on all orders page should be: "+orderSideShouldBe);
 
         //Get the value
         String orderSideIs=sideSellAndFull.getText();
-        test.log(LogStatus.INFO,"Market order status should be: "+orderSideIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Order side on all orders page status should be: "+orderSideIs);
 
         //Compare the values
         if(orderSideIs.equals(orderSideShouldBe)){
@@ -208,11 +246,11 @@ public class SpotSellMarketOrder {
 
         //Price type
         String typeOfPriceShouldBe=PropertyReaderOptimized.getKeyValue("typeOfPrice");
-        test.log(LogStatus.INFO,"Type of price should be: "+typeOfPriceShouldBe);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Type of price on all orders page should be: "+typeOfPriceShouldBe);
 
         //Get the value
         String priceTypeIs=basePage.getText(priceType);
-        test.log(LogStatus.INFO,"Type of price is: "+priceTypeIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Type of price on all orders page is: "+priceTypeIs);
 
         //Compare the values
         if(priceTypeIs.equals(typeOfPriceShouldBe)){
@@ -231,7 +269,7 @@ public class SpotSellMarketOrder {
 
         //Currency amount
         double currencyAmountIs=currencyAmount;
-        test.log(LogStatus.INFO,"Enter currency amount is: "+currencyAmountIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Enter currency amount is: "+currencyAmountIs);
 
         //Split the value
         String fillAmount=filledAmount.getText();
@@ -239,7 +277,7 @@ public class SpotSellMarketOrder {
 
         //Convert string values to double
         double filledAmountIs = Double.parseDouble(filledAmount[0]);
-        test.log(LogStatus.INFO,"Filled amount is: "+filledAmountIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount on all orders page is: "+filledAmountIs);
 
         //Compare the values
         if ((filledAmountIs == currencyAmountIs)) {
@@ -258,15 +296,15 @@ public class SpotSellMarketOrder {
 
         //Enter currency amount
         double enterCurrencyAmountIs=currencyAmount;
-        test.log(LogStatus.INFO,"Enter amount is: "+enterCurrencyAmountIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Enter amount is: "+enterCurrencyAmountIs);
 
         //Filled currency amount
         double filledCurrencyAmountIs=filledCurrencyAmount;
-        test.log(LogStatus.INFO,"Filled amount is: "+filledCurrencyAmountIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount on all orders page is: "+filledCurrencyAmountIs);
 
         //Subtract the values
         double remainingAmountShouldBe=enterCurrencyAmountIs-filledCurrencyAmountIs;
-        test.log(LogStatus.INFO,"Remaining amount should be: "+remainingAmountShouldBe);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Remaining amount on all orders page should be: "+remainingAmountShouldBe);
 
         //Split the value
         String remainingAmt=remainingAmount.getText();
@@ -274,7 +312,7 @@ public class SpotSellMarketOrder {
 
         //Convert string values to double
         double remainingAmountIs=Double.parseDouble(remainingAmountValue[0]);
-        test.log(LogStatus.INFO,"Remaining amount is: "+remainingAmountIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Remaining amount on all orders page is: "+remainingAmountIs);
 
         //Compare the values
         if (remainingAmountIs==remainingAmountShouldBe) {
@@ -293,12 +331,12 @@ public class SpotSellMarketOrder {
 
         //Enter amount
         double enterUSDTAmt=enterUSDTAmount;
-        test.log(LogStatus.INFO,"Enter amount is: "+enterUSDTAmt);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Enter amount is: "+enterUSDTAmt);
 
         //Convert string values to double
         String totalTradingAmount = totalAmount.getText();
         double tradingUSDTAmount = Double.parseDouble(totalTradingAmount.replace(",", ""));
-        test.log(LogStatus.INFO, "Order history trading amount is: " + tradingUSDTAmount);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"On all orders page total amount is: " + tradingUSDTAmount);
 
         //Compare the values
         if (tradingUSDTAmount<=enterUSDTAmt) {

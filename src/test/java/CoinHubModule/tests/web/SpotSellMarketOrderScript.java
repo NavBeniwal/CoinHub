@@ -63,6 +63,19 @@ public class SpotSellMarketOrderScript extends TestBase {
     }
 
     @Test(priority = 4)
+    public void verifyAfterPlacedMarketOrderOnTradeHistoryPageStatusShouldBeDoneFunctionality() throws IOException, InterruptedException {
+        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(sellMarketOrder.validateAfterPlacedMarketOrderOnTradeHistoryPageStatusShouldBeDone(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 5)
     public void verifyTypeOfOrderShouldBeMarketFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -75,7 +88,7 @@ public class SpotSellMarketOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 5)
+    @Test(priority = 6)
     public void verifySideOfOrderShouldBeBuyAndFullFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -88,7 +101,7 @@ public class SpotSellMarketOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 6)
+    @Test(priority = 7)
     public void verifyPriceTypeShouldBeMarketFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -101,7 +114,7 @@ public class SpotSellMarketOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 7)
+    @Test(priority = 8)
     public void verifyFilledAmountValueFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -114,7 +127,7 @@ public class SpotSellMarketOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 8)
+    @Test(priority = 9)
     public void verifyRemainingAmountValueFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -127,7 +140,7 @@ public class SpotSellMarketOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 9)
+    @Test(priority = 10)
     public void verifyOrderTotalAmountShouldBeLessOrEqualEnterUSDTAmountFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -140,7 +153,7 @@ public class SpotSellMarketOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 10)
+    @Test(priority = 11)
     public void verifyAfterPlaceBuyMarketOrderBalanceOfUSDTFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -153,7 +166,7 @@ public class SpotSellMarketOrderScript extends TestBase {
         }
     }
 
-    @Test(priority = 11)
+    @Test(priority = 12)
     public void verifyAfterPlaceBuyMarketOrderBalanceOfCurrencyFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
