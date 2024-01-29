@@ -75,10 +75,10 @@ public class ChangePasswordPageScript extends TestBase {
     }
 
     @Test(priority = 5)
-    public void verifyChangePasswordPageFunctionality() throws IOException, InterruptedException {
+    public void verifyPasswordChangePopUpMsgFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(changePasswordPage.validateChangePasswordPage(PropertyReaderOptimized.getExcelSheetValue(34,4),test),true);
+            softAssert.assertEquals(changePasswordPage.validatePasswordChangePopUpMsg(PropertyReaderOptimized.getExcelSheetValue(34,4),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");

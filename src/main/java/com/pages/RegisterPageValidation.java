@@ -84,10 +84,10 @@ public class RegisterPageValidation {
     public boolean validateRegisterPageEmailRequiredValidation(String email,ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue = false;
 
-        //Click on the signup button
+        //Click on the register button
         basePage.threadSleep();
         basePage.click(registerBtn);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the SignUp button.");
+        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the register button.");
 
         //Click on the signup button
         basePage.waitForElementToBeVisible(createAccountBtn);
@@ -97,11 +97,14 @@ public class RegisterPageValidation {
         //Required validation
         basePage.waitForElementToBeVisible(emailRequiredValidation);
         String emailValidation=emailRequiredValidation.getText();
+
+        //Compare the values
+        basePage.waitForElementToBeVisible(emailRequiredValidation);
         if (emailValidation.equals(email)) {
-            isTrue = false;
+            isTrue = true;
             test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Email is required validation is matched.");
         } else {
-            isTrue = true;
+            isTrue = false;
             test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Email is required validation isn't matched.");
         }
         return isTrue;

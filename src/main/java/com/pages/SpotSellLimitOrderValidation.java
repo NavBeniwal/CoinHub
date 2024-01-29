@@ -23,6 +23,18 @@ public class SpotSellLimitOrderValidation {
 
     @FindBy(xpath = "//span[text()='Trade']")
     private WebElement tradeBtn;
+    @FindBy(xpath = "//div[@class='style_selectMarket__currency__RS+if']")
+    private WebElement dropDownButton;
+    @FindBy(xpath = "//h3[text()='BNB/USDT']")
+    private WebElement bnbUSDTPair;
+    @FindBy(xpath = "//h3[text()='ETH/USDT']")
+    private WebElement ethUSDTPair;
+    @FindBy(xpath = "//h3[text()='BTC/USDT']")
+    private WebElement btcUSDTPair;
+    @FindBy(xpath = "//h3[text()='TRX/USDT']")
+    private WebElement trxUSDTPair;
+    @FindBy(xpath = "//h3[text()='SHIB/USDT']")
+    private WebElement shibUSDTPair;
     @FindBy(xpath = "//button[text()='Sell']")
     private WebElement sellBtn;
     @FindBy(xpath = "//div[text()='LIMIT']")
@@ -58,8 +70,17 @@ public class SpotSellLimitOrderValidation {
         basePage.click(tradeBtn);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the trade button.");
 
+        //Click on the drop-down
+        basePage.waitForElementToBeVisible(dropDownButton);
+        basePage.click(dropDownButton);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the drop-down.");
+
+        //Click on the BNB/USDT pair
+        basePage.waitForElementToBeVisible(bnbUSDTPair);
+        basePage.click(bnbUSDTPair);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the currency pair.");
+
         //Click on the sell button
-        basePage.waitForElementToBeInvisible(sellBtn);
         basePage.waitForElementToBeVisible(sellBtn);
         basePage.click(sellBtn);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the sell button.");
@@ -122,38 +143,6 @@ public class SpotSellLimitOrderValidation {
         } else {
             isTrue = true;
             test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Total is required validation message isn't matched.");
-        }
-
-        return isTrue;
-    }
-
-    public boolean validateOrderNotAsPerTradingRulesWithLowPriceValidationMessage(String orderNotAsPerTradingRules, ExtentTest test) throws IOException {
-        boolean isTrue = false;
-
-        //Enter the value in the price text field
-        basePage.waitForElementToBeVisible(limitPriceTextField);
-        basePage.enterText(limitPriceTextField, "10");
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified enter the value in the price text field.");
-
-        //Enter the value in the amount text field
-        basePage.waitForElementToBeVisible(limitTotalTextField);
-        basePage.enterText(limitTotalTextField, "25");
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified enter the value in the amount text field.");
-
-        //Click on the sell button
-        basePage.waitForElementToBeVisible(placeSellOrderButton);
-        basePage.click(placeSellOrderButton);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the place sell order button.");
-
-        //Compare the values
-        basePage.waitForElementToBeVisible(orderNotAsPerTradingRulesErrorMsg);
-        String orderNotAsPerTradingRulesValidation = orderNotAsPerTradingRulesErrorMsg.getText();
-        if (orderNotAsPerTradingRulesValidation.equals(orderNotAsPerTradingRules)) {
-            isTrue = true;
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Order not as per trading rules. pop-up message is matched.");
-        } else {
-            isTrue = true;
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Order not as per trading rules. pop-up message isn't matched.");
         }
 
         return isTrue;

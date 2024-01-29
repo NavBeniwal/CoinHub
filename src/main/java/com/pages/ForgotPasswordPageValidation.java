@@ -123,6 +123,7 @@ public class ForgotPasswordPageValidation {
         boolean isTrue=false;
 
         String mailinatorEmail = PropertyReaderOptimized.getKeyValue("forgotPasswordMailinatorEmail");
+        String forgotPasswordEmail=PropertyReaderOptimized.getKeyValue("forgotPasswordEmail");
 
         //Clear the value in the email name text field
         basePage.waitForElementToBeVisible(emailTextField);
@@ -130,7 +131,7 @@ public class ForgotPasswordPageValidation {
 
         //Enter the value in the email text field
         basePage.waitForElementToBeVisible(emailTextField);
-        basePage.enterText(emailTextField,"nav@mailinator.com");
+        basePage.enterText(emailTextField,forgotPasswordEmail);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the email text field.");
 
         //Click on the reset password button

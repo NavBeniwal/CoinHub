@@ -23,6 +23,18 @@ public class SpotBuyMarketOrderValidation {
 
     @FindBy(xpath = "//span[text()='Trade']")
     private WebElement tradeBtn;
+    @FindBy(xpath = "//div[@class='style_selectMarket__currency__RS+if']")
+    private WebElement dropDownButton;
+    @FindBy(xpath = "//h3[text()='BNB/USDT']")
+    private WebElement bnbUSDTPair;
+    @FindBy(xpath = "//h3[text()='ETH/USDT']")
+    private WebElement ethUSDTPair;
+    @FindBy(xpath = "//h3[text()='BTC/USDT']")
+    private WebElement btcUSDTPair;
+    @FindBy(xpath = "//h3[text()='TRX/USDT']")
+    private WebElement trxUSDTPair;
+    @FindBy(xpath = "//h3[text()='SHIB/USDT']")
+    private WebElement shibUSDTPair;
     @FindBy(xpath = "(//input[@placeholder='Total'])[1]")
     private WebElement marketTotalTextField;
     @FindBy(xpath = "(//span[text()='PLACE BUY ORDER'])[1]")
@@ -45,6 +57,16 @@ public class SpotBuyMarketOrderValidation {
         basePage.waitForElementToBeVisible(tradeBtn);
         basePage.click(tradeBtn);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the trade button.");
+
+        //Click on the drop-down
+        basePage.waitForElementToBeVisible(dropDownButton);
+        basePage.click(dropDownButton);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the drop-down.");
+
+        //Click on the BNB/USDT pair
+        basePage.waitForElementToBeVisible(bnbUSDTPair);
+        basePage.click(bnbUSDTPair);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the currency pair.");
 
         //Click on the buy button
         basePage.waitForElementToBeVisible(placeBuyOrderButton);

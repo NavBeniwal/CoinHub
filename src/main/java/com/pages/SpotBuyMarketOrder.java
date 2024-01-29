@@ -32,9 +32,19 @@ public class SpotBuyMarketOrder {
     private WebElement tradeBtn;
     @FindBy(xpath = "//div[@class='style_selectMarket__currency__RS+if']")
     private WebElement dropDownButton;
-    @FindBy(xpath = "(//h4)[15]")
-    private WebElement availableBalanceOfUSDT;
+    @FindBy(xpath = "//h3[text()='BNB/USDT']")
+    private WebElement bnbUSDTPair;
+    @FindBy(xpath = "//h3[text()='ETH/USDT']")
+    private WebElement ethUSDTPair;
+    @FindBy(xpath = "//h3[text()='BTC/USDT']")
+    private WebElement btcUSDTPair;
+    @FindBy(xpath = "//h3[text()='TRX/USDT']")
+    private WebElement trxUSDTPair;
+    @FindBy(xpath = "//h3[text()='SHIB/USDT']")
+    private WebElement shibUSDTPair;
     @FindBy(xpath = "(//h4)[13]")
+    private WebElement availableBalanceOfUSDT;
+    @FindBy(xpath = "(//h4)[15]")
     private WebElement availableBalanceOfCurrency;
     @FindBy(xpath = "(//input[@placeholder='Enter Amount'])[1]")
     private WebElement marketCoinAmountTextField;
@@ -72,6 +82,16 @@ public class SpotBuyMarketOrder {
         basePage.waitForElementToBeVisible(tradeBtn);
         basePage.click(tradeBtn);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the trade button.");
+
+        //Click on the drop-down
+        basePage.waitForElementToBeVisible(dropDownButton);
+        basePage.click(dropDownButton);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the drop-down.");
+
+        //Click on the BNB/USDT pair
+        basePage.waitForElementToBeVisible(btcUSDTPair);
+        basePage.click(btcUSDTPair);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the currency pair.");
 
         //Before place the market order total available balance of USDT
         basePage.waitForElementToBeVisible(availableBalanceOfUSDT);
@@ -139,7 +159,7 @@ public class SpotBuyMarketOrder {
         //Get the value
         basePage.waitForElementToBeVisible(status);
         String allOrdersPageStatusIs=status.getText();
-        test.log(LogStatus.INFO,"Market order status on all trades page is: "+allOrdersPageStatusIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Market order status on all trades page is: "+allOrdersPageStatusIs);
 
         //Compare the values
         if(allOrdersPageStatusIs.equals(marketOrderStatus)){
@@ -278,6 +298,7 @@ public class SpotBuyMarketOrder {
             test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified both the values aren't equal.");
         }
 
+        filledCurrencyAmount=filledAmountIs;
         return isTrue;
     }
 
@@ -290,7 +311,7 @@ public class SpotBuyMarketOrder {
 
         //Filled currency amount
         double filledCurrencyAmountIs=filledCurrencyAmount;
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount on all trades page is: "+filledCurrencyAmountIs);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount on all orders page is: "+filledCurrencyAmountIs);
 
         //Subtract the values
         double remainingAmountShouldBe=enterCurrencyAmountIs-filledCurrencyAmountIs;
@@ -346,7 +367,7 @@ public class SpotBuyMarketOrder {
         double beforePlaceMarketOrderBalanceOfUSDT=beforePlaceBuyMarketOrderAvailableBalanceOfUSDT;
 
         //Subtract the values
-        double afterPlaceBuyMarketOrderUSDTBalanceShouldBe=beforePlaceMarketOrderBalanceOfUSDT-(tradingAmountOfUSDT+(tradingAmountOfUSDT*0.2)/100);
+        double afterPlaceBuyMarketOrderUSDTBalanceShouldBe=beforePlaceMarketOrderBalanceOfUSDT-tradingAmountOfUSDT;
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"After place buy market order available balance of USDT should be:  "+afterPlaceBuyMarketOrderUSDTBalanceShouldBe);
 
         //After place buy the market order available balance of USDT
@@ -371,7 +392,7 @@ public class SpotBuyMarketOrder {
         double beforePlaceBuyMarketOrderBalanceOfCurrency=beforePlaceBuyMarketOrderAvailableBalanceOfCurrency;
 
         //After place market order currency balance should be
-        double afterPlaceBuyMarketOrderBalanceOfCurrencyShouldBe=beforePlaceBuyMarketOrderBalanceOfCurrency+filledCurrencyAmount;
+        double afterPlaceBuyMarketOrderBalanceOfCurrencyShouldBe=beforePlaceBuyMarketOrderBalanceOfCurrency+filledCurrencyAmount-(filledCurrencyAmount*0.2)/100;
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"After place buy market order available balance of currency should be:  "+afterPlaceBuyMarketOrderBalanceOfCurrencyShouldBe);
 
         //After place the market order available balance of currency

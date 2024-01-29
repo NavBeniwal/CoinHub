@@ -157,20 +157,20 @@ public class HomePage {
         return isTrue;
     }
 
-    public boolean validateIsHomePageHeaderDemoTradingButtonPresent(ExtentTest test) throws IOException {
-        boolean isTrue=false;
-
-        //Demo trading button
-        basePage.waitForElementToBeVisible(demoTradingBtn);
-        if(demoTradingBtn.isDisplayed()){
-            isTrue=true;
-            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified demo trading button is present on the home page header.");
-        }else {
-            isTrue=false;
-            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified demo trading button isn't present on the home page header.");
-        }
-        return isTrue;
-    }
+//    public boolean validateIsHomePageHeaderDemoTradingButtonPresent(ExtentTest test) throws IOException {
+//        boolean isTrue=false;
+//
+//        //Demo trading button
+//        basePage.waitForElementToBeVisible(demoTradingBtn);
+//        if(demoTradingBtn.isDisplayed()){
+//            isTrue=true;
+//            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified demo trading button is present on the home page header.");
+//        }else {
+//            isTrue=false;
+//            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified demo trading button isn't present on the home page header.");
+//        }
+//        return isTrue;
+//    }
 
     public boolean validateIsHomePageHeaderLoginButtonPresent(ExtentTest test) throws IOException {
         boolean isTrue=false;

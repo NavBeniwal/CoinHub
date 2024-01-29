@@ -21,10 +21,10 @@ public class RegisterPageScript extends TestBase {
     }
 
     @Test(priority = 1)
-    public void verifySignUpPageFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPage.validateSignUpPage(test),true);
+            softAssert.assertEquals(registerPage.validateRegisterPage(test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");

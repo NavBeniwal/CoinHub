@@ -73,7 +73,7 @@ public class RegisterPage {
     @FindBy(xpath = "//h3[text()='Home']")
     private WebElement homePage;
 
-    public boolean validateSignUpPage(ExtentTest test) throws IOException, InterruptedException {
+    public boolean validateRegisterPage(ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue = false;
 
         String email= PropertyReaderOptimized.getKeyValue("registerEmail");
@@ -247,6 +247,7 @@ public class RegisterPage {
         String otp = PropertyReaderOptimized.getKeyValue("registerOtp");
 
         //Enter the value in the enter code text field
+        Thread.sleep(30000);
         basePage.waitForElementToBeVisible(enterCodeTextField);
         basePage.enterText(enterCodeTextField, otp);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified entered the value in the enter code text field.");

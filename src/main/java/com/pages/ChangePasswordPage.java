@@ -48,7 +48,6 @@ public class ChangePasswordPage {
     private WebElement otpSentPopUpMsg;
     @FindBy(xpath = "//span[text()='Password changed successfully']")
     private WebElement passwordChangePopUpMsg;
-
     @FindBy(xpath = "//input[@id='search']")
     private WebElement mailinatorLoginTextField;
     @FindBy(xpath = "//button[text()='GO']")
@@ -122,7 +121,7 @@ public class ChangePasswordPage {
         return isTrue;
     }
 
-    public boolean validateChangePasswordPage(String passwordChange,ExtentTest test) throws IOException, InterruptedException {
+    public boolean validatePasswordChangePopUpMsg(String passwordChange,ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue = false;
 
         String mailinatorEmail = PropertyReaderOptimized.getKeyValue("changePasswordMailinatorEmail");

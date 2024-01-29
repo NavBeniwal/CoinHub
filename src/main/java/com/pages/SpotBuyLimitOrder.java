@@ -35,9 +35,19 @@ public class SpotBuyLimitOrder {
     private WebElement tradeBtn;
     @FindBy(xpath = "//div[@class='style_selectMarket__currency__RS+if']")
     private WebElement dropDownButton;
-    @FindBy(xpath = "(//h4)[15]")
-    private WebElement availableBalanceOfUSDT;
+    @FindBy(xpath = "//h3[text()='BNB/USDT']")
+    private WebElement bnbUSDTPair;
+    @FindBy(xpath = "//h3[text()='ETH/USDT']")
+    private WebElement ethUSDTPair;
+    @FindBy(xpath = "//h3[text()='BTC/USDT']")
+    private WebElement btcUSDTPair;
+    @FindBy(xpath = "//h3[text()='TRX/USDT']")
+    private WebElement trxUSDTPair;
+    @FindBy(xpath = "//h3[text()='SHIB/USDT']")
+    private WebElement shibUSDTPair;
     @FindBy(xpath = "(//h4)[13]")
+    private WebElement availableBalanceOfUSDT;
+    @FindBy(xpath = "(//h4)[15]")
     private WebElement availableBalanceOfCurrency;
     @FindBy(xpath = "//div[text()='LIMIT']")
     private WebElement limitBtn;
@@ -86,6 +96,16 @@ public class SpotBuyLimitOrder {
         basePage.waitForElementToBeVisible(tradeBtn);
         basePage.click(tradeBtn);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the trade button.");
+
+        //Click on the drop-down
+        basePage.waitForElementToBeVisible(dropDownButton);
+        basePage.click(dropDownButton);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the drop-down.");
+
+        //Click on the currency pair
+        basePage.waitForElementToBeVisible(ethUSDTPair);
+        basePage.click(ethUSDTPair);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the currency pair.");
 
         //Before place the limit order total available balance of USDT
         basePage.waitForElementToBeVisible(availableBalanceOfUSDT);
@@ -294,14 +314,14 @@ public class SpotBuyLimitOrder {
         double remainingAmountValue=remainingAmountVal;
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Remaining amount is: "+remainingAmountValue);
 
+        //Subtracts the values
+        double filledAmountShouldBe=amountVal-remainingAmountValue;
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount should be: "+filledAmountShouldBe);
+
         //Convert string values to double
         String filledAmt=filledAmount.getText();
         double filledAmountValueIs=Double.parseDouble(filledAmt.replace(",",""));
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount is: "+filledAmountValueIs);
-
-        //Subtracts the values
-        double filledAmountShouldBe=amountVal-remainingAmountValue;
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Filled amount should be: "+filledAmountShouldBe);
 
         //Compare the values
         if(filledAmountValueIs==filledAmountShouldBe){

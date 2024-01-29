@@ -23,6 +23,18 @@ public class SpotSellMarketOrderValidation {
 
     @FindBy(xpath = "//span[text()='Trade']")
     private WebElement tradeBtn;
+    @FindBy(xpath = "//div[@class='style_selectMarket__currency__RS+if']")
+    private WebElement dropDownButton;
+    @FindBy(xpath = "//h3[text()='BNB/USDT']")
+    private WebElement bnbUSDTPair;
+    @FindBy(xpath = "//h3[text()='ETH/USDT']")
+    private WebElement ethUSDTPair;
+    @FindBy(xpath = "//h3[text()='BTC/USDT']")
+    private WebElement btcUSDTPair;
+    @FindBy(xpath = "//h3[text()='TRX/USDT']")
+    private WebElement trxUSDTPair;
+    @FindBy(xpath = "//h3[text()='SHIB/USDT']")
+    private WebElement shibUSDTPair;
     @FindBy(xpath = "//button[text()='Sell']")
     private WebElement sellBtn;
     @FindBy(xpath = "(//input[@placeholder='Total'])[1]")
@@ -47,6 +59,16 @@ public class SpotSellMarketOrderValidation {
         basePage.waitForElementToBeVisible(tradeBtn);
         basePage.click(tradeBtn);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the trade button.");
+
+        //Click on the drop-down
+        basePage.waitForElementToBeVisible(dropDownButton);
+        basePage.click(dropDownButton);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the drop-down.");
+
+        //Click on the BNB/USDT pair
+        basePage.waitForElementToBeVisible(bnbUSDTPair);
+        basePage.click(bnbUSDTPair);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified clicked on the currency pair.");
 
         //Click on the sell button
         basePage.waitForElementToBeVisible(sellBtn);
@@ -89,34 +111,63 @@ public class SpotSellMarketOrderValidation {
         return isTrue;
     }
 
-    public boolean validatePairNotAvailableValidationMessage(String pairNotAvailable, ExtentTest test) throws IOException {
+    public boolean validateInsufficientBalanceValidationMessage(String insufficientBalance, ExtentTest test) throws IOException {
         boolean isTrue = false;
 
-        String buyMarketUSDTAmountMsg = PropertyReaderOptimized.getKeyValue("buyMarketUSDTAmountMsg");
+        String buyMarketUSDTAmountValidation = PropertyReaderOptimized.getKeyValue("buyMarketUSDTAmountValidation");
 
         //Enter the value in the amount text field
         basePage.waitForElementToBeVisible(marketTotalTextField);
-        basePage.enterText(marketTotalTextField, buyMarketUSDTAmountMsg);
+        basePage.enterText(marketTotalTextField, buyMarketUSDTAmountValidation);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified enter the value in the amount text field.");
 
-        //Click on the sell button
+        //Click on the buy button
         basePage.waitForElementToBeVisible(placeSellOrderButton);
         basePage.click(placeSellOrderButton);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the place sell order button.");
 
         //Compare the values
-        basePage.waitForElementToBeVisible(pairIsNotAvailable);
-        String pairNotAvailablePopUPMsg = pairIsNotAvailable.getText();
-        if (pairNotAvailablePopUPMsg.equals(pairNotAvailable)) {
+        basePage.waitForElementToBeVisible(insufficientBalanceValidationMsg);
+        String insufficientBalanceValidation = insufficientBalanceValidationMsg.getText();
+        if (insufficientBalanceValidation.equals(insufficientBalance)) {
             isTrue = true;
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified This pair is not available for trading at the moment. Please try again later validation message is matched.");
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Insufficient balance validation message is matched.");
         } else {
             isTrue = true;
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified This pair is not available for trading at the moment. Please try again later validation message isn't matched.");
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Insufficient balance validation message isn't matched.");
         }
 
         return isTrue;
     }
+
+//    public boolean validatePairNotAvailableValidationMessage(String pairNotAvailable, ExtentTest test) throws IOException {
+//        boolean isTrue = false;
+//
+//        String buyMarketUSDTAmountMsg = PropertyReaderOptimized.getKeyValue("buyMarketUSDTAmountMsg");
+//
+//        //Enter the value in the amount text field
+//        basePage.waitForElementToBeVisible(marketTotalTextField);
+//        basePage.enterText(marketTotalTextField, buyMarketUSDTAmountMsg);
+//        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified enter the value in the amount text field.");
+//
+//        //Click on the sell button
+//        basePage.waitForElementToBeVisible(placeSellOrderButton);
+//        basePage.click(placeSellOrderButton);
+//        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified clicked on the place sell order button.");
+//
+//        //Compare the values
+//        basePage.waitForElementToBeVisible(pairIsNotAvailable);
+//        String pairNotAvailablePopUPMsg = pairIsNotAvailable.getText();
+//        if (pairNotAvailablePopUPMsg.equals(pairNotAvailable)) {
+//            isTrue = true;
+//            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified This pair is not available for trading at the moment. Please try again later validation message is matched.");
+//        } else {
+//            isTrue = true;
+//            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified This pair is not available for trading at the moment. Please try again later validation message isn't matched.");
+//        }
+//
+//        return isTrue;
+//    }
 
     public boolean validateTotalAmountMustBeAboveValidationMessage(String totalAmountMustBeAbove, ExtentTest test) throws IOException {
         boolean isTrue = false;

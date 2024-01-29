@@ -28,7 +28,7 @@ public class TestBase {
     @BeforeClass
     public void beforeClassConfig() throws IOException {
         driver.manage().window().maximize();
-        basePage.navigateTo(PropertyReaderOptimized.getKeyValue("url"));
+        basePage.navigateTo(PropertyReaderOptimized.getKeyValue("prodUrl"));
     }
     @AfterClass
     public void afterClassConfig() throws InterruptedException {

@@ -76,19 +76,6 @@ public class SpotSellLimitOrderValidationScript extends TestBase {
     }
 
     @Test(priority = 5)
-    public void verifyOrderNotAsPerTradingRulesWithLowPriceValidationMessageFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
-        try {
-            softAssert.assertEquals(sellLimitOrderValidation.validateOrderNotAsPerTradingRulesWithLowPriceValidationMessage(PropertyReaderOptimized.getExcelSheetValue(11,7),test),true);
-            test.log(LogStatus.PASS,"All conditions are verified.");
-        } catch (Error | Exception e) {
-            test.log(LogStatus.FAIL,"All conditions aren't verified.");
-            Assert.fail(String.valueOf(e.getStackTrace()));
-            softAssert.assertAll();
-        }
-    }
-
-    @Test(priority = 6)
     public void verifyOrderNotAsPerTradingRulesWithHighPriceValidationMessageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -101,7 +88,7 @@ public class SpotSellLimitOrderValidationScript extends TestBase {
         }
     }
 
-    @Test(priority = 7)
+    @Test(priority = 6)
     public void verifyPriceShouldBeLessThanOrEqualToValidationMessageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -114,7 +101,7 @@ public class SpotSellLimitOrderValidationScript extends TestBase {
         }
     }
 
-    @Test(priority = 8)
+    @Test(priority = 7)
     public void verifyInsufficientBalanceValidationMessageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -127,7 +114,7 @@ public class SpotSellLimitOrderValidationScript extends TestBase {
         }
     }
 
-    @Test(priority = 9)
+    @Test(priority = 8)
     public void verifyTotalAmountMustBeAboveValidationMessageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {

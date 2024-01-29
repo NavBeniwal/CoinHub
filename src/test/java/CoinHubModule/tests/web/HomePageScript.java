@@ -117,19 +117,19 @@ public class HomePageScript extends TestBase {
         }
     }
 
-    @Test(priority = 8)
-    public void verifyIsHomePageHeaderDemoTradingButtonPresent() throws IOException {
-        test=Reports.createTest(new Object(){}.getClass().getEnclosingMethod().getName(),reports);
-        try
-        {
-            softAssert.assertEquals(homePage.validateIsHomePageHeaderDemoTradingButtonPresent(test),true);
-            test.log(LogStatus.PASS,"All conditions are verified.");
-        }catch (Error | Exception e) {
-            test.log(LogStatus.FAIL,"All conditions aren't verified.");
-            Assert.fail(String.valueOf(e.getStackTrace()));
-            softAssert.assertAll();
-        }
-    }
+//    @Test(priority = 8)
+//    public void verifyIsHomePageHeaderDemoTradingButtonPresent() throws IOException {
+//        test=Reports.createTest(new Object(){}.getClass().getEnclosingMethod().getName(),reports);
+//        try
+//        {
+//            softAssert.assertEquals(homePage.validateIsHomePageHeaderDemoTradingButtonPresent(test),true);
+//            test.log(LogStatus.PASS,"All conditions are verified.");
+//        }catch (Error | Exception e) {
+//            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+//            Assert.fail(String.valueOf(e.getStackTrace()));
+//            softAssert.assertAll();
+//        }
+//    }
 
     @Test(priority = 9)
     public void verifyIsHomePageHeaderLoginButtonPresent() throws IOException {

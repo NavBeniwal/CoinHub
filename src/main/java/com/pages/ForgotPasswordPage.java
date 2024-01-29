@@ -97,6 +97,8 @@ public class ForgotPasswordPage {
         boolean isTrue = false;
 
         String mailinatorEmail = PropertyReaderOptimized.getKeyValue("forgotPasswordMailinatorEmail");
+        String newPassword=PropertyReaderOptimized.getKeyValue("forgotNewPassword");
+        String confirmPassword=PropertyReaderOptimized.getKeyValue("forgotConfirmPassword");
 
         //Switch to the new window
         driver.switchTo().newWindow(WindowType.WINDOW).navigate().to(PropertyReaderOptimized.getKeyValue("mailinatorUrl"));
@@ -137,12 +139,12 @@ public class ForgotPasswordPage {
 
         //Enter the value in the new password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField, "Test@123");
+        basePage.enterText(newPasswordTextField,newPassword);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified entered the value in the new password text field.");
 
         //Enter the value in the confirm-password text field
         basePage.waitForElementToBeVisible(confirmPasswordTextField);
-        basePage.enterText(confirmPasswordTextField, "Test@123");
+        basePage.enterText(confirmPasswordTextField,confirmPassword);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified entered the value in the confirm password text field.");
 
         //Click on the update button
