@@ -6,6 +6,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.report.Reports;
 import com.utils.PropertyReaderOptimized;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -28,7 +29,8 @@ public class TestBase {
     @BeforeClass
     public void beforeClassConfig() throws IOException {
         driver.manage().window().maximize();
-        basePage.navigateTo(PropertyReaderOptimized.getKeyValue("prodUrl"));
+        //driver.manage().window().setSize(new Dimension(700,700));
+        basePage.navigateTo(PropertyReaderOptimized.getKeyValue("stageUrl"));
     }
     @AfterClass
     public void afterClassConfig() throws InterruptedException {
