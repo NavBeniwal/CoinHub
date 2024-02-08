@@ -73,10 +73,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 5)
-    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOnlyNumericValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingSymbolFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOnlyNumericValue(PropertyReaderOptimized.getExcelSheetValue(22,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingSymbol(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -86,10 +86,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 6)
-    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOnlyAlphabeticValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressWithMissingDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOnlyAlphabeticValue(PropertyReaderOptimized.getExcelSheetValue(22,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressWithMissingDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -99,10 +99,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 7)
-    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithAlphaNumericValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressWithMissingTopLevelDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithAlphaNumericValue(PropertyReaderOptimized.getExcelSheetValue(22,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressWithMissingTopLevelDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -112,10 +112,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 8)
-    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMultipleAtTheRateValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressWithTopLevelDomainWithTrailingDotFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMultipleAtTheRateValue(PropertyReaderOptimized.getExcelSheetValue(22,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressWithTopLevelDomainWithTrailingDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -125,10 +125,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 9)
-    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOnlySpecialCharacterValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithDoubleDotInDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOnlySpecialCharacterValue(PropertyReaderOptimized.getExcelSheetValue(22,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithDoubleDotInDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -138,10 +138,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 10)
-    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithoutAtTheRateFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithInvalidTopLevelDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithoutAtTheRate(PropertyReaderOptimized.getExcelSheetValue(22,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithInvalidTopLevelDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -151,10 +151,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 11)
-    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMultipleDotFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithInvalidCharacterHasTagFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMultipleDot(PropertyReaderOptimized.getExcelSheetValue(22,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithInvalidCharacterHasTag(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -164,10 +164,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 12)
-    public void verifyRegisterPagePasswordTextFieldValidationWithLessThanEightCharactersFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithSemicolonInsteadOfDotFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldValidationWithLessThanEightCharacters(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithSemicolonInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -177,10 +177,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 13)
-    public void verifyRegisterPagePasswordTextFieldWithOnlyNumericValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingUserNameFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithOnlyNumericValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingUserName(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -190,10 +190,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 14)
-    public void verifyRegisterPagePasswordTextFieldWithOnlySpecialCharacterValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingDomainNameFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithOnlySpecialCharacterValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingDomainName(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -203,10 +203,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 15)
-    public void verifyRegisterPagePasswordTextFieldWithOnlyAlphabeticValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithConsecutiveDotsInDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithOnlyAlphabeticValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithConsecutiveDotsInDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -216,10 +216,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 16)
-    public void verifyRegisterPagePasswordTextFieldWithAlphaNumericValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingDotBetweenDomainAndTopLevelDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithAlphaNumericValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingDotBetweenDomainAndTopLevelDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -229,10 +229,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 17)
-    public void verifyRegisterPagePasswordTextFieldWithSpecialAndNumericValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMultipleConsecutiveDotsFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithSpecialAndNumericValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMultipleConsecutiveDots(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -242,10 +242,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 18)
-    public void verifyRegisterPagePasswordTextFieldWithSpecialAndAlphabeticValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithUnderScoreInDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithSpecialAndAlphabeticValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithUnderScoreInDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -255,10 +255,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 19)
-    public void verifyRegisterPagePasswordTextFieldWithoutUpperCaseValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingDotBeforeTopLevelDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithoutUpperCaseValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingDotBeforeTopLevelDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -268,10 +268,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 20)
-    public void verifyRegisterPagePasswordTextFieldWithoutLowerCaseValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithExclamationMarkInDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithoutLowerCaseValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithExclamationMarkInDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -281,10 +281,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 21)
-    public void verifyRegisterPagePasswordTextFieldWithoutNumericValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithHyphenAtTheBeginningOfDomainFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithoutNumericValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithHyphenAtTheBeginningOfDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -294,10 +294,10 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 22)
-    public void verifyRegisterPagePasswordTextFieldWithoutSpecialCharacterValueFunctionality() throws IOException, InterruptedException {
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithHyphenAtTheEndOfDomainFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithoutSpecialCharacterValue(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithHyphenAtTheEndOfDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -307,6 +307,214 @@ public class RegisterPageValidationScript extends TestBase {
     }
 
     @Test(priority = 23)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithTrailingDotAfterTopLevelDomainFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithTrailingDotAfterTopLevelDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 24)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingTopLevelDomainFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithMissingTopLevelDomain(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 25)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithCommaInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithCommaInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 26)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithSlashInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithSlashInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 27)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithBackSlashInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithBackSlashInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 28)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithHashSymbolInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithHashSymbolInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 29)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOpeningParenthesisInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithOpeningParenthesisInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 30)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithClosingParenthesisInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithClosingParenthesisInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 31)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithApostropheInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithApostropheInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 32)
+    public void verifyRegisterPageEmailTextFieldInvalidEmailAddressValidationWithQuotationMarkInsteadOfDotFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPageEmailTextFieldInvalidEmailAddressValidationWithQuotationMarkInsteadOfDot(PropertyReaderOptimized.getExcelSheetValue(1,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 33)
+    public void verifyRegisterPagePasswordTextFieldValidationWithMissingAlphabetFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldValidationWithMissingAlphabet(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 34)
+    public void verifyRegisterPagePasswordTextFieldWithLessThanEightCharactersFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithLessThanEightCharacters(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 35)
+    public void verifyRegisterPagePasswordTextFieldWithMissingNumberFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithMissingNumber(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 36)
+    public void verifyRegisterPagePasswordTextFieldWithMissingUpperCaseLetterFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithMissingUpperCaseLetter(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 37)
+    public void verifyRegisterPagePasswordTextFieldWithMissingLowercaseLetterFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithMissingLowercaseLetter(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 38)
+    public void verifyRegisterPagePasswordTextFieldWithMissingSpecialCharacterFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(registerPageValidation.validateRegisterPagePasswordTextFieldWithMissingSpecialCharacter(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 39)
     public void verifyRegisterPagePhoneNumberRequiredValidationFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -319,7 +527,7 @@ public class RegisterPageValidationScript extends TestBase {
         }
     }
 
-    @Test(priority = 24)
+    @Test(priority = 40)
     public void verifyRegisterPageExistPhoneNumberErrorMsgFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -332,7 +540,7 @@ public class RegisterPageValidationScript extends TestBase {
         }
     }
 
-    @Test(priority = 25)
+    @Test(priority = 41)
     public void verifyRegisterPageInvalidPhoneNumberValidationFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -345,7 +553,7 @@ public class RegisterPageValidationScript extends TestBase {
         }
     }
 
-    @Test(priority = 26)
+    @Test(priority = 42)
     public void verifyRegisterPageRequiredOtpValidationFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
@@ -358,7 +566,7 @@ public class RegisterPageValidationScript extends TestBase {
         }
     }
 
-    @Test(priority = 27)
+    @Test(priority = 43)
     public void verifyRegisterPageInvalidOtpValidationFunctionality() throws IOException, InterruptedException {
         test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {

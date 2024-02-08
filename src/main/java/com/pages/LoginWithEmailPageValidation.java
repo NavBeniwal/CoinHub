@@ -96,11 +96,10 @@ public class LoginWithEmailPageValidation {
         return isTrue;
     }
 
-    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithOnlyNumericValue(String invalidEmail,ExtentTest test) throws IOException {
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMissingSymbol(String invalidEmail,ExtentTest test) throws IOException {
         boolean isTrue=false;
 
-        String numeric= RandomStringUtils.randomNumeric(5,10);
-        String email=numeric+".com";
+        String email="myemail.com";
 
         //Enter the value in the email text field
         basePage.waitForElementToBeVisible(emailTextField);
@@ -120,11 +119,10 @@ public class LoginWithEmailPageValidation {
         return isTrue;
     }
 
-    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithOnlyAlphabeticValue(String invalidEmail,ExtentTest test) throws IOException {
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressWithMissingDomain(String invalidEmail,ExtentTest test) throws IOException {
         boolean isTrue=false;
 
-        String alphabetic= RandomStringUtils.randomAlphabetic(5,10);
-        String email=alphabetic+".com";
+        String email="myemail@com";
 
         //Clear the value in the email name text field
         basePage.waitForElementToBeVisible(emailTextField);
@@ -150,11 +148,97 @@ public class LoginWithEmailPageValidation {
         return isTrue;
     }
 
-    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithAlphaNumericValue(String invalidEmail,ExtentTest test) throws IOException {
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressWithMissingTopLevelDomain(String invalidEmail,ExtentTest test) throws IOException {
         boolean isTrue=false;
 
-        String alphanumeric= RandomStringUtils.randomAlphanumeric(5,10);
-        String email=alphanumeric+".com";
+        String email="myemail@domain";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressWithTopLevelDomainWithTrailingDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain.";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithDoubleDotInDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain..com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithInvalidTopLevelDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain.c";
 
         //Clear the value in the email name text field
         basePage.waitForElementToBeVisible(emailTextField);
@@ -179,11 +263,10 @@ public class LoginWithEmailPageValidation {
         return isTrue;
     }
 
-    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMultipleAtTheRateValue(String invalidEmail,ExtentTest test) throws IOException {
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithInvalidCharacterHasTag(String invalidEmail,ExtentTest test) throws IOException {
         boolean isTrue=false;
 
-        String randomAlphanumeric= RandomStringUtils.randomAlphanumeric(5,10);
-        String email=randomAlphanumeric+"@jd@.com";
+        String email="myemail@domain#com";
 
         //Clear the value in the email name text field
         basePage.waitForElementToBeVisible(emailTextField);
@@ -208,37 +291,10 @@ public class LoginWithEmailPageValidation {
         return isTrue;
     }
 
-    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithOnlySpecialCharacterValue(String invalidEmail,ExtentTest test) throws IOException {
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithSemicolonInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
         boolean isTrue=false;
 
-        //Clear the value in the email name text field
-        basePage.waitForElementToBeVisible(emailTextField);
-        basePage.clearValue(emailTextField);
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
-
-        //Enter the value in the email text field
-        basePage.waitForElementToBeVisible(emailTextField);
-        basePage.enterText(emailTextField,"!@#$.com");
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
-
-        //Validation message
-        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
-        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
-        if (invalidEmailValidation.equals(invalidEmail)) {
-            isTrue=true;
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
-        }else {
-            isTrue=false;
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
-        }
-        return isTrue;
-    }
-
-    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithoutAtTheRate(String invalidEmail,ExtentTest test) throws IOException {
-        boolean isTrue=false;
-
-        String randomAlphanumeric=RandomStringUtils.randomAlphanumeric(5,10);
-        String email=randomAlphanumeric+".com";
+        String email="myemail@domain.com;";
 
         //Clear the value in the email name text field
         basePage.waitForElementToBeVisible(emailTextField);
@@ -263,11 +319,541 @@ public class LoginWithEmailPageValidation {
         return isTrue;
     }
 
-    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMultipleDot(String invalidEmail,ExtentTest test) throws IOException {
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMissingUserName(String invalidEmail,ExtentTest test) throws IOException {
         boolean isTrue=false;
 
-        String randomAlphanumeric=RandomStringUtils.randomAlphanumeric(5,10);
-        String email=randomAlphanumeric+"in.a.com";
+        String email="@domain.com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMissingDomainName(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@.com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithConsecutiveDotsInDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain..com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMissingDotBetweenDomainAndTopLevelDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domaincom";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMultipleConsecutiveDots(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain..com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithUnderScoreInDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain_com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMissingDotBeforeTopLevelDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domaincom";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithExclamationMarkInDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain!.com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithHyphenAtTheBeginningOfDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@-domain.com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithHyphenAtTheEndOfDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain-.com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithTrailingDotAfterTopLevelDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain.com.";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithMissingTopLevelDomain(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain.c";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithCommaInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain,com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithSlashInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain/com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithBackSlashInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain\\com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithHashSymbolInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain#com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithOpeningParenthesisInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain(com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithClosingParenthesisInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain)com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithApostropheInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain'com";
+
+        //Clear the value in the email name text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.clearValue(emailTextField);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value in the Email Text Field.");
+
+        //Enter the value in the email text field
+        basePage.waitForElementToBeVisible(emailTextField);
+        basePage.enterText(emailTextField,email);
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the Email Text Field.");
+
+        //Validation message
+        basePage.waitForElementToBeVisible(emailTextFieldInvalidValidation);
+        String invalidEmailValidation=emailTextFieldInvalidValidation.getText();
+        if (invalidEmailValidation.equals(invalidEmail)) {
+            isTrue=true;
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation is matched.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Please enter valid email validation isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateLoginPageEmailTextFieldInvalidEmailAddressValidationWithQuotationMarkInsteadOfDot(String invalidEmail,ExtentTest test) throws IOException {
+        boolean isTrue=false;
+
+        String email="myemail@domain\"com";
 
         //Clear the value in the email name text field
         basePage.waitForElementToBeVisible(emailTextField);

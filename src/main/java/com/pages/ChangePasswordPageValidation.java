@@ -141,7 +141,7 @@ public class ChangePasswordPageValidation {
         return isTrue = true;
     }
 
-    public boolean validateChangePasswordPageConfrimPasswordTextFieldValidation(String confirmPassword,ExtentTest test) throws IOException, InterruptedException {
+    public boolean validateChangePasswordPageConfirmPasswordTextFieldValidation(String confirmPassword,ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue = false;
 
         //Enter confirm-password validation message
@@ -163,8 +163,8 @@ public class ChangePasswordPageValidation {
 
         //OTP required validation message
         basePage.waitForElementToBeVisible(otpRequiredValidationMsg);
-        String otpValition=otpRequiredValidationMsg.getText();
-        if(otpValition.equals(OTP)){
+        String otpValidation=otpRequiredValidationMsg.getText();
+        if(otpValidation.equals(OTP)){
             isTrue=true;
             test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified OTP is required validation is matched.");
         }else {

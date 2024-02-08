@@ -88,10 +88,10 @@ public class ChangePasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 6)
-    public void verifyChangePasswordPageConfrimPasswordTextFieldValidationFunctionality() throws IOException, InterruptedException {
+    public void verifyChangePasswordPageConfirmPasswordTextFieldValidationFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(changePasswordPageValidation.validateChangePasswordPageConfrimPasswordTextFieldValidation(PropertyReaderOptimized.getExcelSheetValue(34,1),test),true);
+            softAssert.assertEquals(changePasswordPageValidation.validateChangePasswordPageConfirmPasswordTextFieldValidation(PropertyReaderOptimized.getExcelSheetValue(34,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
