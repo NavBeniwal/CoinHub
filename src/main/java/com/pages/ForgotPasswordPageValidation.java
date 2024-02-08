@@ -213,318 +213,180 @@ public class ForgotPasswordPageValidation {
         return isTrue;
     }
 
-    public boolean validateRegisterPagePasswordTextFieldValidationWithLessThanEightCharacters(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
+    public boolean validateForgotPasswordPagePasswordTextFieldValidationWithMissingAlphabet(String passwordContains,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
-        String randomAlphanumeric=RandomStringUtils.randomAlphanumeric(1,4);
-        String password=randomAlphanumeric+"A@";
+        String password="!@1234";
 
-        //Enter the value in the new password text field
+        //Enter the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,"1");
+        basePage.enterText(newPasswordTextField,password);
 
-        //Clear the value from the new password text field
+        //Clear the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
+        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value in the password text field.");
 
-        //Enter the value in the new password text field
+        //Enter the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.enterText(newPasswordTextField,password);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep the less than 8 characters in the password text field.");
 
-        //Password must contains validation message
+        //Validation message
         basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
+        String invalidPassword=passwordMustContainsValidationMsg.getText();
+        if (invalidPassword.equals(passwordContains)) {
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation is matched.");
             isTrue = true;
         } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation isn't matched.");
             isTrue = false;
         }
+
         return isTrue;
     }
 
-    public boolean validateRegisterPagePasswordTextFieldWithOnlyNumericValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
+    public boolean validateForgotPasswordPagePasswordTextFieldWithLessThanEightCharacters(String passwordContains,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
-        String password=RandomStringUtils.randomNumeric(1,10);
+        String password="Pass@12";
 
-        //Clear the value from the new password text field
+        //Clear the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
+        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value in the password text field.");
 
-        //Enter the value in the new password text field
+        //Enter the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.enterText(newPasswordTextField,password);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep only Numeric value in the password text field.");
 
-        //Password must contains validation message
+        //Validation message
         basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
+        String invalidPassword=passwordMustContainsValidationMsg.getText();
+        if (invalidPassword.equals(passwordContains)) {
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation is matched.");
             isTrue = true;
         } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation isn't matched.");
             isTrue = false;
         }
+
         return isTrue;
     }
 
-    public boolean validateRegisterPagePasswordTextFieldWithOnlySpecialCharacterValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
+    public boolean validateForgotPasswordPagePasswordTextFieldWithMissingNumber(String passwordContains,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
-        String password="!@#$%#$@@";
+        String password="Password@";
 
-        //Clear the value from the new password text field
+        //Clear the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
+        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value in the password text field.");
 
-        //Enter the value in the new password text field
+        //Enter the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.enterText(newPasswordTextField,password);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep only Special Character value in the password text field.");
 
-        //Password must contains validation message
+        //Validation message
         basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
+        String invalidPassword=passwordMustContainsValidationMsg.getText();
+        if(invalidPassword.equals(passwordContains)) {
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation is matched.");
+            isTrue=true;
+        }else {
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation isn't matched.");
+            isTrue=false;
         }
+
         return isTrue;
     }
 
-    public boolean validateRegisterPagePasswordTextFieldWithOnlyAlphabeticValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
+    public boolean validateForgotPasswordPagePasswordTextFieldWithMissingUpperCaseLetter(String passwordContains,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
-        String password=RandomStringUtils.randomAlphabetic(1,20);
+        String password="password@123";
 
-        //Clear the value from the new password text field
+        //Clear the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Clear the value from the new password text field.");
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Clear the value in the password text field.");
 
-        //Enter the value in the new password text field
+        //Enter the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.enterText(newPasswordTextField,password);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Keep only Alphabetic value in the password text field.");
 
-        //Password must contains validation message
+        //Validation message
         basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
+        String invalidPassword=passwordMustContainsValidationMsg.getText();
+        if(invalidPassword.equals(passwordContains)) {
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation is matched.");
+            isTrue=true;
+        }else {
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation isn't matched.");
+            isTrue=false;
         }
+
         return isTrue;
     }
 
-    public boolean validateRegisterPagePasswordTextFieldWithAlphaNumericValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
+    public boolean validateForgotPasswordPagePasswordTextFieldWithMissingLowercaseLetter(String passwordContains,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
-        String password=RandomStringUtils.randomAlphanumeric(1,20);
+        String password="PASSWORD@123";
 
-        //Clear the value from the new password text field
+        //Clear the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Clear the value from the new password text field.");
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Clear the value in the password text field.");
 
-        //Enter the value in the new password text field
+        //Enter the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.enterText(newPasswordTextField,password);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Keep Numeric and Alphabetic value in the password text field.");
 
-        //Password must contains validation message
+        //Validation message
         basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
+        String invalidPassword=passwordMustContainsValidationMsg.getText();
+        if(invalidPassword.equals(passwordContains)) {
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation is matched.");
+            isTrue=true;
+        }else {
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation isn't matched.");
+            isTrue=false;
         }
+
         return isTrue;
     }
 
-    public boolean validateRegisterPagePasswordTextFieldWithSpecialAndNumericValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
+    public boolean validateForgotPasswordPagePasswordTextFieldWithMissingSpecialCharacter(String passwordContains,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
-        String numericValue=RandomStringUtils.randomNumeric(1,10);
-        String password=numericValue+"@#!$";
+        String mailinatorEmail=PropertyReaderOptimized.getKeyValue("registerPageValidationMailinatorEmail");
+        String newPassword="Test@123";
+        String password="Password123";
 
-        //Clear the value from the new password text field
+        //Clear the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
+        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value in the password text field.");
 
-        //Enter the value in the new password text field
+        //Enter the value in the password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
         basePage.enterText(newPasswordTextField,password);
         test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep Special Character and Numeric value in the password text field.");
 
-        //Password must contains validation message
+        //Validation message
         basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
+        String invalidPassword=passwordMustContainsValidationMsg.getText();
+        if (invalidPassword.equals(passwordContains)) {
+            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation is matched.");
             isTrue = true;
         } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
-        }
-        return isTrue;
-    }
-
-    public boolean validateRegisterPagePasswordTextFieldWithSpecialAndAlphabeticValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
-        boolean isTrue = false;
-
-        String randomAlphabetic=RandomStringUtils.randomAlphabetic(1,10);
-        String password=randomAlphabetic+"@#!$";
-
-        //Clear the value from the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
-
-        //Enter the value in the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,password);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep Special Character and Alphabetic value in the password text field.");
-
-        //Password must contains validation message
-        basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
-        }
-        return isTrue;
-    }
-
-    public boolean validateRegisterPagePasswordTextFieldWithoutUpperCaseValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
-        boolean isTrue = false;
-
-        String password="admin@123";
-
-        //Clear the value from the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
-
-        //Enter the value in the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,password);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep 1 Lower Case, 1 Number, 1 Special, and At least 8 Characters in the password text field.");
-
-
-        //Password must contains validation message
-        basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
-        }
-        return isTrue;
-    }
-
-    public boolean validateRegisterPagePasswordTextFieldWithoutLowerCaseValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
-        boolean isTrue = false;
-
-        String password="ADMIN@123";
-
-        //Clear the value from the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
-
-        //Enter the value in the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,password);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep 1 Upper Case, 1 Number, 1 Special, and At least 8 Characters in the password text field.");
-
-        //Password must contains validation message
-        basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
-        }
-        return isTrue;
-    }
-
-    public boolean validateRegisterPagePasswordTextFieldWithoutNumericValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
-        boolean isTrue = false;
-
-        String randomAlphabetic=RandomStringUtils.randomAlphabetic(1,10);
-        String password=randomAlphabetic+"!@#$";
-
-        //Clear the value from the password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
-
-        //Enter the value in the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,password);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep 1 Upper Case, 1 Lower Case, 1 Special, and At least 8 Characters in the password text field.");
-
-        //Password must contains validation message
-        basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
-            isTrue = false;
-        }
-        return isTrue;
-    }
-
-    public boolean validateRegisterPagePasswordTextFieldWithoutSpecialCharacterValue(String passwordValidation,ExtentTest test) throws InterruptedException, IOException {
-        boolean isTrue = false;
-
-        String password=RandomStringUtils.randomAlphanumeric(1,15);
-
-        //Clear the value from the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.clearValue(newPasswordTextField);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Clear the value from the new password text field.");
-
-        //Enter the value in the new password text field
-        basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,password);
-        test.log(LogStatus.INFO, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Keep 1 Upper Case, 1 Lower Case, 1 Number, and At least 8 Characters in the password text field.");
-
-        //Password must contains validation message
-        basePage.waitForElementToBeVisible(passwordMustContainsValidationMsg);
-        String passwordValidationMessage=passwordMustContainsValidationMsg.getText();
-        if (passwordValidationMessage.equals(passwordValidation)) {
-            test.log(LogStatus.PASS, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message is matched.");
-            isTrue = true;
-        } else {
-            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation message isn't matched.");
+            test.log(LogStatus.FAIL, test.addScreenCapture(BasePage.getScreenCapture(driver)), "Verified Password must be a minimum of 8 characters including number, upper, lower and one special character validation isn't matched.");
             isTrue = false;
         }
 
@@ -534,7 +396,7 @@ public class ForgotPasswordPageValidation {
 
         //Enter the value in the new password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,"Test@123");
+        basePage.enterText(newPasswordTextField,newPassword);
 
         return isTrue;
     }

@@ -85,10 +85,10 @@ public class ForgotPasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 6)
-    public void verifyRegisterPagePasswordTextFieldValidationWithLessThanEightCharactersFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+    public void verifyForgotPasswordPagePasswordTextFieldValidationWithMissingAlphabetFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldValidationWithLessThanEightCharacters(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
+            softAssert.assertEquals(forgotPasswordPageValidation.validateForgotPasswordPagePasswordTextFieldValidationWithMissingAlphabet(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -98,10 +98,10 @@ public class ForgotPasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 7)
-    public void verifyRegisterPagePasswordTextFieldWithOnlyNumericValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+    public void verifyForgotPasswordPagePasswordTextFieldWithLessThanEightCharactersFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithOnlyNumericValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
+            softAssert.assertEquals(forgotPasswordPageValidation.validateForgotPasswordPagePasswordTextFieldWithLessThanEightCharacters(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -111,10 +111,10 @@ public class ForgotPasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 8)
-    public void verifyRegisterPagePasswordTextFieldWithOnlySpecialCharacterValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+    public void verifyForgotPasswordPagePasswordTextFieldWithMissingNumberFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithOnlySpecialCharacterValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
+            softAssert.assertEquals(forgotPasswordPageValidation.validateForgotPasswordPagePasswordTextFieldWithMissingNumber(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -124,10 +124,10 @@ public class ForgotPasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 9)
-    public void verifyRegisterPagePasswordTextFieldWithOnlyAlphabeticValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+    public void verifyForgotPasswordPagePasswordTextFieldWithMissingUpperCaseLettereFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithOnlyAlphabeticValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
+            softAssert.assertEquals(forgotPasswordPageValidation.validateForgotPasswordPagePasswordTextFieldWithMissingUpperCaseLetter(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -137,10 +137,10 @@ public class ForgotPasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 10)
-    public void verifyRegisterPagePasswordTextFieldWithAlphaNumericValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+    public void verifyForgotPasswordPagePasswordTextFieldWithMissingLowercaseLetterFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithAlphaNumericValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
+            softAssert.assertEquals(forgotPasswordPageValidation.validateForgotPasswordPagePasswordTextFieldWithMissingLowercaseLetter(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -150,10 +150,10 @@ public class ForgotPasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 11)
-    public void verifyRegisterPagePasswordTextFieldWithSpecialAndNumericValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+    public void verifyForgotPasswordPagePasswordTextFieldWithMissingSpecialCharacterFunctionality() throws IOException, InterruptedException {
+        test=Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithSpecialAndNumericValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
+            softAssert.assertEquals(forgotPasswordPageValidation.validateForgotPasswordPagePasswordTextFieldWithMissingSpecialCharacter(PropertyReaderOptimized.getExcelSheetValue(23,1),test),true);
             test.log(LogStatus.PASS,"All conditions are verified.");
         } catch (Error | Exception e) {
             test.log(LogStatus.FAIL,"All conditions aren't verified.");
@@ -163,70 +163,6 @@ public class ForgotPasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 12)
-    public void verifyRegisterPagePasswordTextFieldWithSpecialAndAlphabeticValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
-        try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithSpecialAndAlphabeticValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
-            test.log(LogStatus.PASS,"All conditions are verified.");
-        } catch (Error | Exception e) {
-            test.log(LogStatus.FAIL,"All conditions aren't verified.");
-            Assert.fail(String.valueOf(e.getStackTrace()));
-            softAssert.assertAll();
-        }
-    }
-
-    @Test(priority = 13)
-    public void verifyRegisterPagePasswordTextFieldWithoutUpperCaseValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
-        try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithoutUpperCaseValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
-            test.log(LogStatus.PASS,"All conditions are verified.");
-        } catch (Error | Exception e) {
-            test.log(LogStatus.FAIL,"All conditions aren't verified.");
-            Assert.fail(String.valueOf(e.getStackTrace()));
-            softAssert.assertAll();
-        }
-    }
-
-    @Test(priority = 14)
-    public void verifyRegisterPagePasswordTextFieldWithoutLowerCaseValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
-        try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithoutLowerCaseValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
-            test.log(LogStatus.PASS,"All conditions are verified.");
-        } catch (Error | Exception e) {
-            test.log(LogStatus.FAIL,"All conditions aren't verified.");
-            Assert.fail(String.valueOf(e.getStackTrace()));
-            softAssert.assertAll();
-        }
-    }
-
-    @Test(priority = 15)
-    public void verifyRegisterPagePasswordTextFieldWithoutNumericValueFunctionality() throws IOException, InterruptedException {
-        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
-        try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithoutNumericValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test),true);
-            test.log(LogStatus.PASS,"All conditions are verified.");
-        } catch (Error | Exception e) {
-            test.log(LogStatus.FAIL,"All conditions aren't verified.");
-            Assert.fail(String.valueOf(e.getStackTrace()));
-            softAssert.assertAll();
-        }
-    }
-
-    @Test(priority = 16)
-    public void verifyRegisterPagePasswordTextFieldWithoutSpecialCharacterValueFunctionality() throws IOException, InterruptedException {test = Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
-        try {
-            softAssert.assertEquals(forgotPasswordPageValidation.validateRegisterPagePasswordTextFieldWithoutSpecialCharacterValue(PropertyReaderOptimized.getExcelSheetValue(52,1),test), true);
-            test.log(LogStatus.PASS,"All conditions are verified.");
-        } catch (Error | Exception e) {
-            test.log(LogStatus.FAIL,"All conditions aren't verified.");
-            Assert.fail(String.valueOf(e.getStackTrace()));
-            softAssert.assertAll();
-        }
-    }
-
-    @Test(priority = 17)
     public void verifyConfirmPasswordShouldBeSameValidationMsgFunctionality() throws IOException, InterruptedException {test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
             softAssert.assertEquals(forgotPasswordPageValidation.validateConfirmPasswordShouldBeSameValidationMsg(PropertyReaderOptimized.getExcelSheetValue(51,1),test),true);
