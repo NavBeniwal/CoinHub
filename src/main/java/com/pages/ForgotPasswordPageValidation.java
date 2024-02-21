@@ -365,7 +365,6 @@ public class ForgotPasswordPageValidation {
     public boolean validateForgotPasswordPagePasswordTextFieldWithMissingSpecialCharacter(String passwordContains,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
-        String mailinatorEmail=PropertyReaderOptimized.getKeyValue("registerPageValidationMailinatorEmail");
         String newPassword="Test@123";
         String password="Password123";
 
@@ -404,9 +403,10 @@ public class ForgotPasswordPageValidation {
     public boolean validateConfirmPasswordShouldBeSameValidationMsg(String confirmPasswordValidation,ExtentTest test) throws InterruptedException, IOException {
         boolean isTrue = false;
 
+        String confirmPassword="Test@1234";
         //Enter the value in the confirm-password text field
         basePage.waitForElementToBeVisible(confirmPasswordTextField);
-        basePage.enterText(confirmPasswordTextField,"a");
+        basePage.enterText(confirmPasswordTextField,confirmPassword);
 
         //Click on the eye button
         basePage.waitForElementToBeVisible(confirmPasswordTextFieldEyeIcon);
@@ -422,6 +422,25 @@ public class ForgotPasswordPageValidation {
         }else {
             isTrue=false;
             test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified Confirm password should be same validation message isn't matched.");
+        }
+        return isTrue;
+    }
+
+    public boolean validateIfTheUserChangeConfirmPasswordAndKeepSameNewPasswordThenValidationShouldNotBeShown(ExtentTest test) throws InterruptedException, IOException {
+        boolean isTrue = false;
+
+        //Enter the value in the new password text field
+        basePage.waitForElementToBeVisible(confirmPasswordTextField);
+        basePage.enterText(confirmPasswordTextField,"4");
+
+        //Confirm password should be same validation message should not be shown
+        basePage.waitForElementToBeVisible(confirmPasswordShouldBeSameValidationMsg);
+        if(confirmPasswordShouldBeSameValidationMsg.isDisplayed()){
+            isTrue=true;
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified validation is displayed.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified validation isn't displayed.");
         }
         return isTrue;
     }

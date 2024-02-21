@@ -173,4 +173,16 @@ public class ForgotPasswordPageValidationScript extends TestBase {
             softAssert.assertAll();
         }
     }
+
+    @Test(priority = 13)
+    public void verifyIfTheUserChangeConfirmPasswordAndKeepSameNewPasswordThenValidationShouldNotBeShownFunctionality() throws IOException, InterruptedException {test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(forgotPasswordPageValidation.validateIfTheUserChangeConfirmPasswordAndKeepSameNewPasswordThenValidationShouldNotBeShown(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
 }

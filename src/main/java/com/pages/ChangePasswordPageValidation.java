@@ -178,14 +178,17 @@ public class ChangePasswordPageValidation {
     public boolean validateChangePasswordPageNewPasswordMustContainValidationMessage(String newPasswordContains,ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue=false;
 
+        String oldPassword="Test";
+        String newPassword="Test";
+
         //Enter the value in the old password text field
         basePage.waitForElementToBeVisible(oldPasswordTextField);
-        basePage.enterText(oldPasswordTextField,"Test");
+        basePage.enterText(oldPasswordTextField,oldPassword);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the old password text field.");
 
         //Enter the value in the new password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,"Test");
+        basePage.enterText(newPasswordTextField,newPassword);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the new password text field.");
 
         //New password must contain validation message
@@ -205,14 +208,17 @@ public class ChangePasswordPageValidation {
     public boolean validateChangePasswordPageConfirmPasswordShouldBeSameValidationMessage(String confirmPasswordValidation,ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue=false;
 
+        String newPassword="@123";
+        String confirmPassword="Test";
+
         //Enter the value in the new password text field
         basePage.waitForElementToBeVisible(newPasswordTextField);
-        basePage.enterText(newPasswordTextField,"@123");
+        basePage.enterText(newPasswordTextField,newPassword);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the new password text field.");
 
         //Enter the value in the confirm-password text field
         basePage.waitForElementToBeVisible(confirmPasswordTextField);
-        basePage.enterText(confirmPasswordTextField,"Test");
+        basePage.enterText(confirmPasswordTextField,confirmPassword);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the confirm password text field.");
 
         //Confirm password should be same validation message
@@ -232,14 +238,17 @@ public class ChangePasswordPageValidation {
     public boolean validateChangePasswordPageGetVerificationCodeErrorPopUpMessage(String getOTPCode,ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue=false;
 
+        String confirmPassword="@123";
+        String emailOTP="1234";
+
         //Enter the value in the confirm-password text field
         basePage.waitForElementToBeVisible(confirmPasswordTextField);
-        basePage.enterText(confirmPasswordTextField,"@123");
+        basePage.enterText(confirmPasswordTextField,confirmPassword);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the confirm password text field.");
 
         //Enter the value in the email otp text field
         basePage.waitForElementToBeVisible(emailOtpTextField);
-        basePage.enterText(emailOtpTextField,"1234");
+        basePage.enterText(emailOtpTextField,emailOTP);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the email otp text field.");
 
         //Click on the change button
@@ -294,10 +303,12 @@ public class ChangePasswordPageValidation {
         boolean isTrue=false;
 
         String mailinatorEmail=PropertyReaderOptimized.getKeyValue("loginEmail");
+        String oldPassword="@1234";
+        String emailOTP="5";
 
         //Enter the value in the email otp text field
         basePage.waitForElementToBeVisible(emailOtpTextField);
-        basePage.enterText(emailOtpTextField,"5");
+        basePage.enterText(emailOtpTextField,emailOTP);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the email otp text field.");
 
         //Remove the value from the email otp text field
@@ -308,7 +319,7 @@ public class ChangePasswordPageValidation {
 
         //Enter the value in the old password text field
         basePage.waitForElementToBeVisible(oldPasswordTextField);
-        basePage.enterText(oldPasswordTextField,"@1234");
+        basePage.enterText(oldPasswordTextField,oldPassword);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the old password text field.");
 
         //Get current window id
@@ -376,6 +387,8 @@ public class ChangePasswordPageValidation {
     public boolean validateChangePasswordPageNewPasswordCanNotBeTheSameErrorPopUpMessage(String newPasswordMessage,ExtentTest test) throws IOException, InterruptedException {
         boolean isTrue=false;
 
+        String oldPassword="Test@123";
+
         //Enter the value in the old password text field
         basePage.waitForElementToBeVisible(oldPasswordTextField);
         basePage.enterText(oldPasswordTextField,"4");
@@ -388,7 +401,7 @@ public class ChangePasswordPageValidation {
 
         //Enter the value in the old password text field
         basePage.waitForElementToBeVisible(oldPasswordTextField);
-        basePage.enterText(oldPasswordTextField,"Test@123");
+        basePage.enterText(oldPasswordTextField,oldPassword);
         test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the old password text field.");
 
         //Click on the change button
@@ -407,6 +420,33 @@ public class ChangePasswordPageValidation {
         }else {
             isTrue=false;
             test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified New password can't be the same, as old one pop-up message isn't matched.");
+        }
+
+        return isTrue;
+    }
+
+    public boolean validateIfTheUserChangeConfirmPasswordAndKeepSameNewPasswordThenValidationShouldNotBeShown(ExtentTest test) throws IOException, InterruptedException {
+        boolean isTrue=false;
+
+        //Enter the value in the confirm-password text field
+        basePage.waitForElementToBeVisible(confirmPasswordTextField);
+        basePage.enterText(confirmPasswordTextField,"4");
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified entered the value in the old password text field.");
+
+        //Enter the value in the new password text field
+        basePage.waitForElementToBeVisible(oldPasswordTextField);
+        basePage.enterText(newPasswordTextField,"4");
+        test.log(LogStatus.INFO,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Verified cleared the value from the old password text field.");
+
+        //Confirm password should be same
+        basePage.threadSleep();
+        basePage.waitForElementToBeVisible(confirmPasswordShouldBeSameValidationMsg);
+        if(confirmPasswordShouldBeSameValidationMsg.isDisplayed()){
+            isTrue=true;
+            test.log(LogStatus.FAIL,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both New & Confirm passwords are same still validation is appearing.");
+        }else {
+            isTrue=false;
+            test.log(LogStatus.PASS,test.addScreenCapture(BasePage.getScreenCapture(driver)),"Both New & Confirm passwords are same.");
         }
 
         return isTrue;

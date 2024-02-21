@@ -192,6 +192,19 @@ public class ChangePasswordPageValidationScript extends TestBase {
     }
 
     @Test(priority = 14)
+    public void verifyIfTheUserChangeConfirmPasswordAndKeepSameNewPasswordThenValidationShouldNotBeShownFunctionality() throws IOException, InterruptedException {
+        test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
+        try {
+            softAssert.assertEquals(changePasswordPageValidation.validateIfTheUserChangeConfirmPasswordAndKeepSameNewPasswordThenValidationShouldNotBeShown(test),true);
+            test.log(LogStatus.PASS,"All conditions are verified.");
+        } catch (Error | Exception e) {
+            test.log(LogStatus.FAIL,"All conditions aren't verified.");
+            Assert.fail(String.valueOf(e.getStackTrace()));
+            softAssert.assertAll();
+        }
+    }
+
+    @Test(priority = 15)
     public void verifyChangePasswordPageOtpMaxLimitValidationMessageFunctionality() throws IOException, InterruptedException {
         test= Reports.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), reports);
         try {
