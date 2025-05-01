@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a198a39-7ab3-4e81-a7ea-a65726db8829" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_3_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_api_3_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_core_3_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_transport_3_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_transport_httpclient5_3_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_07.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auto_service_auto_service_annotations_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_1_jre.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_relevantcodes_extentreports_2_41_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_netty_netty_reactive_streams_2_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_SparseBitSet_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dev_failsafe_failsafe_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_bonigarcia_webdrivermanager_5_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_kqueue_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_kqueue_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_kqueue_osx_x86_64_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_api_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_api_events_1_26_0_alpha.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_api_logs_1_26_0_alpha.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_context_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_exporter_logging_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_extension_incubator_1_26_0_alpha.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_common_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_1_26_0_alpha.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_spi_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_logs_1_26_0_alpha.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_metrics_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_trace_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_semconv_1_26_0_alpha.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_5_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_client5_httpclient5_5_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_h2_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_5_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_5_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_lite_5_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_asynchttpclient_async_http_client_2_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_asynchttpclient_async_http_client_netty_utils_2_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_64.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_64.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_brotli_dec_0_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_aerogear_aerogear_otp_java_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chromium_driver_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v113_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v114_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v115_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v85_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_http_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_json_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_manager_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_4_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoinHubExchangeScript.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/BasePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/driver/DriverManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/AccountLockWithEmailPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/AccountLockWithPhoneNumberPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ChangePasswordPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ChangePasswordPageValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/EarnPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ForgotPasswordPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ForgotPasswordPageValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/HomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/IntegrationTestCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginChangePasswordPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginWithEmailPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginWithEmailPageValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginWithPhoneNumberPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginWithPhoneNumberPageValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/RegisterPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/RegisterPageValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotBuyLimitOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotBuyLimitOrderValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotBuyMarketOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotBuyMarketOrderValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotSellLimitOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotSellLimitOrderValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotSellMarketOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/SpotSellMarketOrderValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/report/Reports.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/PropertyReaderOptimized.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/base/TestBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/AccountLockWithEmailPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/AccountLockWithPhoneNumberPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/ChangePasswordPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/ChangePasswordPageValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/EarnPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/ForgotPasswordPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/ForgotPasswordPageValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/HomePageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/IntegrationTestCaseScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/LoginWithEmailPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/LoginWithEmailPageValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/LoginWithPhoneNumberPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/RegisterPageScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/RegisterPageValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotBuyLimitOrderScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotBuyMarketOrderScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotBuyMarketOrderValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotSellLimitOrderScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotSellMarketOrderScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CoinHubModule/tests/web/SpotSellMarketOrderValidationScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/base/BasePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/driver/DriverManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/AccountLockWithEmailPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/AccountLockWithPhoneNumberPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/ChangePasswordPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/ChangePasswordPageValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/EarnPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/ForgotPasswordPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/ForgotPasswordPageValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/IntegrationTestCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/LoginChangePasswordPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/LoginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/LoginWithEmailPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/LoginWithEmailPageValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/LoginWithPhoneNumberPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/LoginWithPhoneNumberPageValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/RegisterPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/RegisterPageValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotBuyLimitOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotBuyLimitOrderValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotBuyMarketOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotBuyMarketOrderValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotSellLimitOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotSellLimitOrderValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotSellMarketOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pages/SpotSellMarketOrderValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/report/Reports.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/PropertyReaderOptimized.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/base/TestBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/AccountLockWithEmailPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/AccountLockWithEmailPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/AccountLockWithEmailPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/AccountLockWithPhoneNumberPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/AccountLockWithPhoneNumberPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/AccountLockWithPhoneNumberPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ChangePasswordPageValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/EarnPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/ForgotPasswordPageValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/HomePageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/IntegrationTestCaseScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/IntegrationTestCaseScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/IntegrationTestCaseScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/IntegrationTestCaseScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/IntegrationTestCaseScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/IntegrationTestCaseScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$21.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$22.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$23.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$24.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$25.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$26.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$27.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$31.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$35.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithEmailPageValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/LoginWithPhoneNumberPageValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$21.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$22.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$23.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$24.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$25.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$26.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$27.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$31.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$35.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$36.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$37.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$38.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$39.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$40.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$41.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$42.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$43.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/RegisterPageValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyLimitOrderValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotBuyMarketOrderValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellLimitOrderValidationScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderValidationScript$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderValidationScript$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderValidationScript$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderValidationScript$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderValidationScript$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CoinHubModule/tests/web/SpotSellMarketOrderValidationScript.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2fAnPRWQIcMbEX5NxOiEuVUjuBE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Automation&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ant/IdeaProjects/CoinHubExchangeScript&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ant\IdeaProjects\CoinHubExchangeScript" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ant\IdeaProjects\CoinHubExchangeScript" />
+      <recent name="C:\Users\ant\IdeaProjects\CoinHubExchangeScript\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.ForgotPasswordPageValidationScript">
+    <configuration name="ChangePasswordPageScript" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CoinHubExchangeScript" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CoinHubModule.tests.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CoinHubModule.tests.web" />
+      <option name="MAIN_CLASS_NAME" value="CoinHubModule.tests.web.ChangePasswordPageScript" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChangePasswordPageValidationScript" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CoinHubExchangeScript" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CoinHubModule.tests.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CoinHubModule.tests.web" />
+      <option name="MAIN_CLASS_NAME" value="CoinHubModule.tests.web.ChangePasswordPageValidationScript" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForgotPasswordPageScript" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CoinHubExchangeScript" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CoinHubModule.tests.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CoinHubModule.tests.web" />
+      <option name="MAIN_CLASS_NAME" value="CoinHubModule.tests.web.ForgotPasswordPageScript" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForgotPasswordPageValidationScript" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CoinHubExchangeScript" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CoinHubModule.tests.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CoinHubModule.tests.web" />
+      <option name="MAIN_CLASS_NAME" value="CoinHubModule.tests.web.ForgotPasswordPageValidationScript" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginWithEmailPageScript" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CoinHubExchangeScript" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CoinHubModule.tests.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CoinHubModule.tests.web" />
+      <option name="MAIN_CLASS_NAME" value="CoinHubModule.tests.web.LoginWithEmailPageScript" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ForgotPasswordPageValidationScript" />
+        <item itemvalue="TestNG.ForgotPasswordPageScript" />
+        <item itemvalue="TestNG.ChangePasswordPageValidationScript" />
+        <item itemvalue="TestNG.ChangePasswordPageScript" />
+        <item itemvalue="TestNG.LoginWithEmailPageScript" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a198a39-7ab3-4e81-a7ea-a65726db8829" name="Changes" comment="" />
+      <created>1713252729481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713252729481</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

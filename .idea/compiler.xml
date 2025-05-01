@@ -9,5 +9,8 @@
         <module name="CoinHubExchangeScript" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CoinHubExchangeScript" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
